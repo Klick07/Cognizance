@@ -6,6 +6,7 @@ import Registration from "./components/Registration";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signupclient from "./components/SignupClient";
 import LoginClient from "./components/LoginClient";
+import Milestone from "./components/Milestone";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/twousers" element={<Registration />} />
         <Route path="/signupClient" element={<Signupclient />} />
         <Route path="/loginClient" element={<LoginClient />} />
+        <Route path="/milestone" element={<Milestone />} />
       </Routes>
     </Router>
   );
