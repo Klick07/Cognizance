@@ -30,9 +30,8 @@ function Login() {
           <input
             className="w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
             type="submit"
-            value="Sign in"
+            value="Sign in as Freelancer"
           />
-
           <div className="flex items-center gap-3">
             <hr className="flex-1 border-gray-600" />
             <span className="text-gray-500 text-sm">or</span>
