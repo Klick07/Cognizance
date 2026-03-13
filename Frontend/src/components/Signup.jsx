@@ -1,11 +1,11 @@
 import React from "react";
 
-function Login() {
+function Signup() {
   return (
     <div className="min-h-screen [background:radial-gradient(ellipse_at_center,_#1a2535_0%,_#080d14_100%)]">
       <div className="flex justify-start pl-70 items-center h-screen backdrop-blur-lg">
         <div className="flex flex-col gap-5 p-8 border border-gray-600 rounded-lg [background:radial-gradient(ellipse_at_center,_#0a1f38_0%,_#050c15_100%)] backdrop-blur-2xl w-96">
-          <p className="text-white text-2xl">Sign In</p>
+          <p className="text-white text-2xl">Sign Up</p>
           <label className="text-white ">
             <p className="text-gray-500 ">Username:</p>
             <input
@@ -30,7 +30,7 @@ function Login() {
           <input
             className="w-full px-3 py-2 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
             type="submit"
-            value="Sign in"
+            value="Sign Up"
           />
 
           <div className="flex items-center gap-3">
@@ -41,12 +41,12 @@ function Login() {
           <input
             className="w-full px-1 py-1 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
             type="submit"
-            value="Sign in with Google"
+            value="Sign up with Google"
           />
           <input
             className="w-full px-1 py-1 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
             type="submit"
-            value="Sign in with Facebook"
+            value="Sign up with Facebook"
           />
         </div>
         <p className="text-white text-2xl pl-80">use your thing here</p>
@@ -55,4 +55,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
