@@ -11,7 +11,7 @@ import Milestone from "./components/Milestone";
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/login" element={<Login />} />
