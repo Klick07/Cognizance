@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Loginclient from "./LoginClient";
 
-function Signup() {
+function SignupClient() {
   return (
     <div className="min-h-screen [background:radial-gradient(ellipse_at_center,_#1a2535_0%,_#080d14_100%)]">
       <div className="flex justify-start pl-70 items-center h-screen backdrop-blur-lg">
@@ -50,4 +50,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignupClient;

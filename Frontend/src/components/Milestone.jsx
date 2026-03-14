@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const data = 
 {
@@ -125,7 +125,31 @@ const data =
 
 function Milestone() {
   const [openId, setOpenId] = useState(1);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    fetch("http://localhost:5000/projectData")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error loading DB:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading || !data) {
+    return (
+      <div className="min-h-screen bg-[#0b1120] flex items-center justify-center text-white">
+        <div className="animate-pulse text-xl font-bold tracking-widest uppercase">
+          Initializing Database...
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen [background:radial-gradient(ellipse_at_center,_#1a2535_0%,_#080d14_100%)] p-4 md:p-12 font-sans text-slate-300">
       <header className="max-w-5xl mx-auto mb-12 border-b border-slate-800 pb-8 text-5xl">

@@ -47,23 +47,7 @@ function Loginclient() {
             type="submit"
             value="Sign in with Facebook"
           />
-          <div className="flex items-center gap-3">
-            <hr className="flex-1 border-gray-600" />
-            <span className="text-gray-500 text-sm">or</span>
-            <hr className="flex-1 border-gray-600" />
-          </div>
-          <input
-            className="w-full px-1 py-1 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
-            type="submit"
-            value="Sign in with Google"
-          />
-          <input
-            className="w-full px-1 py-1 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-gray-400 hover:bg-amber-400"
-            type="submit"
-            value="Sign in with Facebook"
-          />
         </div>
-
         <p className="text-white text-2xl pl-80">use your thing here</p>
       </div>
     </div>
