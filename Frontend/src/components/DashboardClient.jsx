@@ -28,16 +28,41 @@ export default function ClientDashboard() {
     );
   }
 
+  const stats = [
+    { id: 1, Detail: "Total Earning", value: "2545000" },
+    { id: 2, Detail: "Active Projects", value: "5" },
+    { id: 3, Detail: "Completed", value: "15" },
+  ];
+
+
+
   return (
     <div className="min-h-screen [background:radial-gradient(ellipse_at_center,_#1a2535_0%,_#080d14_100%)] py-24 sm:py-32 font-sans">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Hello World
+            Hello {"Suraj"}
           </h2>
           <p className="mt-2 text-lg text-gray-400">
             Analyse your projects in detail.
           </p>
+        </div>
+        <div className="py-24 sm:py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.id}
+                  className="mx-auto flex max-w-xs flex-col gap-y-4 border-gray-100"
+                >
+                  <div className="text-base/7 text-gray-100">{stat.Detail}</div>
+                  <div className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+                    {stat.value}
+                  </div>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
 
         <div className="flex justify-between items-center pb-6 border-b border-slate-800 mt-16">
