@@ -29,7 +29,7 @@ export default function ClientDashboard() {
   }
 
   const stats = [
-    { id: 1, Detail: "Total Earning", value: "2545000" },
+    { id: 1, Detail: "Total Earning", value: "25,45,000" },
     { id: 2, Detail: "Active Projects", value: "5" },
     { id: 3, Detail: "Completed", value: "15" },
   ];

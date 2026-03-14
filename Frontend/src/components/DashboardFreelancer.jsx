@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // ✅ add this
 
 const stats = [
-  { id: 1, Detail: "Total Earning", value: "453453" },
+  { id: 1, Detail: "Total Earning", value: "4,53,453" },
   { id: 2, Detail: "Active Projects", value: "10" },
   { id: 3, Detail: "Completed", value: "13" },
 ];
