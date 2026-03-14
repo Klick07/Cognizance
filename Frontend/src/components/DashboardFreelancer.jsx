@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // ✅ add this
+import { Link } from "react-router-dom";
+import useStore from "../store";
 
 const stats = [
   { id: 1, Detail: "Total Earning", value: "4,53,453" },
@@ -10,6 +11,10 @@ const stats = [
 export default function FreelancerDashboard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const showmodal = useStore((state) => state.showmodal);
+  const setShowmodal = useStore((state) => state.setShowmodal);
+  const closeModal = useStore((state) => state.closeModal);
+  const openModal = useStore((state) => state.openModal);
 
   useEffect(() => {
     fetch("http://localhost:5000/projectData")
@@ -64,9 +69,17 @@ export default function FreelancerDashboard() {
           </div>
         </div>
 
-        <h1 className="text-2xl font-semibold tracking-tight text-pretty text-white sm:text-2xl">
-          Active & Ongoing Projects
-        </h1>
+        <div className="flex justify-between items-center pb-6 border-b border-slate-800 mt-16">
+          <h1 className="text-2xl font-semibold text-white">
+            Active & Ongoing Contracts
+          </h1>
+          <button
+            className="px-4 py-2 border border-slate-700 rounded-lg text-white hover:bg-slate-800 transition-all text-sm"
+            onClick={openModal}
+          >
+            Add Contract
+          </button>
+        </div>
 
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 border-t border-gray-700 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {data.map((project) => (

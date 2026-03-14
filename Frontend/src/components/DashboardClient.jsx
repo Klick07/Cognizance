@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import useStore from "../store";
+
+
 
 export default function ClientDashboard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const showmodal = useStore((state) => state.showmodal);
+  const setShowmodal = useStore((state) => state.setShowmodal);
+  const closeModal = useStore((state) => state.closeModal);
+  const openModal = useStore((state)=>state.openModal)
 
   useEffect(() => {
     fetch("http://localhost:5000/projectData")
@@ -69,7 +77,7 @@ export default function ClientDashboard() {
           <h1 className="text-2xl font-semibold text-white">
             Active & Ongoing Contracts
           </h1>
-          <button className="px-4 py-2 border border-slate-700 rounded-lg text-white hover:bg-slate-800 transition-all text-sm">
+          <button className="px-4 py-2 border border-slate-700 rounded-lg text-white hover:bg-slate-800 transition-all text-sm" onClick={openModal}>
             Add Contract
           </button>
         </div>
@@ -108,6 +116,7 @@ export default function ClientDashboard() {
               </div>
             </Link>
           ))}
+          
         </div>
       </div>
     </div>
